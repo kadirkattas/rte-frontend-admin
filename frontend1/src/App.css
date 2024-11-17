@@ -1,0 +1,23 @@
+.table {
+    width: 100%;
+    table-layout: fixed; /* Locks the table layout to respect given widths */
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+    overflow: hidden; /* Prevents content from overflowing */
+    text-overflow: ellipsis; /* Adds an ellipsis to clipped text */
+    white-space: nowrap; /* Keeps the content on a single line */
+}
+
+.action-column {
+    width: 120px; /* Adjust based on your design needs */
+}
+
+.action-column button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
