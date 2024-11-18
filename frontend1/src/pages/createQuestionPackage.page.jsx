@@ -538,7 +538,10 @@ const CreateQuestionPackagePage = () => {
                 onChange={(e) => setLocalPackageTitle(e.target.value)}
                 className="w-[280px] h-[35px] p-1 pl-4 border-2 border-[#9DD0CE] rounded-[25px] focus:outline-none"
               />
-              <CreateButton onCreate={handleAddQuestion} />
+              <CreateButton
+                onCreate={handleAddQuestion}
+                label={"Create Question"}
+              />
             </div>
           </div>
           <div className=" bg-gradient-to-br from-[#47A7A2] via-[#3E9D98] to-[#8CCCC9]  p-2 border-l-[1.5px] border-r-[1.5px] border-t-[1.5px] border-[#D7D7DB] rounded-t-[18px] h-[43px] w-full text-white">

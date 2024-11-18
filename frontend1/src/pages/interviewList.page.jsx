@@ -331,6 +331,7 @@ const InterviewsPage = () => {
             </select>
 
             <CreateButton
+              label={"Create Interview"}
               onCreate={() => setShowPopup(true)}
               className="ml-4" // Dropdown ile buton arasında boşluk ekler
             />

@@ -166,7 +166,10 @@ const EditQuestionPackagePage = () => {
                   </div>
                 )}
               </div>
-              <CreateButton onCreate={handleAddQuestion} />
+              <CreateButton
+                onCreate={handleAddQuestion}
+                label={"Create Question"}
+              />
             </div>
           </div>
 

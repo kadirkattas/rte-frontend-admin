@@ -34,7 +34,7 @@
 import React from "react";
 import { FiPlus } from "react-icons/fi";
 
-const CreateButton = ({ onCreate }) => {
+const CreateButton = ({ onCreate, label }) => {
   return (
     <button
       onClick={onCreate}
@@ -42,7 +42,7 @@ const CreateButton = ({ onCreate }) => {
     >
       <FiPlus className="mr-2 text-[14px] sm:text-[16px]" />
       <span className="text-[14px] sm:text-[15px] leading-none">
-        Create Package
+        {label || "Create Package"}
       </span>
     </button>
   );
