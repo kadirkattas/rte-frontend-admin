@@ -39,7 +39,7 @@ const useCreateQuestionPackageStore = create((set) => ({
         useCreateQuestionPackageStore.getState();
 
       // Log the data you're sending to the API for debugging
-      console.log("Saving package with data:", { packageTitle, questions });
+      "Saving package with data:", { packageTitle, questions };
 
       await axios.post(
         `/packages/create-package`,

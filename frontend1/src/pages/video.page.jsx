@@ -21,7 +21,7 @@
 //   }, [getVideoUrl, id]);
 
 //   const handleSave = async () => {
-//     console.log(notes);
+//     (notes);
 //     setVideoInfo(id, notes, approved, rejected, interviewId); // Save notes and status
 //     navigate("/video-collection/" + interviewId); // Redirect to the home page
 //   };
@@ -77,7 +77,7 @@ const VideoPage = () => {
   }, [getVideoUrl, id]);
 
   const handleSave = async () => {
-    console.log(notes);
+    notes;
     setVideoInfo(id, notes, approved, rejected, interviewId); // Save notes and status
     navigate("/video-collection/" + interviewId); // Redirect to the home page
   };

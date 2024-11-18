@@ -5,7 +5,7 @@ axios.defaults.baseURL = import.meta.env.VITE_BACKEND_API_URL;
 axios.interceptors.response.use(
   (resp) => resp,
   async (error) => {
-    console.log("Request error", error);
+    "Request error", error;
     if (error.response && error.response.status === 401) {
       try {
         const response = await axios.post(

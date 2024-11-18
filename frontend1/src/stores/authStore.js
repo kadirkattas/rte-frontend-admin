@@ -9,7 +9,7 @@ const useAuthStore = create((set) => ({
   token: Cookies.get("jwtToken") || null,
 
   login: async (email, password) => {
-    console.log(email, password);
+    email, password;
     set({ isLoading: true, error: "" });
 
     try {
@@ -26,7 +26,7 @@ const useAuthStore = create((set) => ({
       const token = response.data.token; // Varsayılan olarak token yanıt yapısını kontrol edin
       set({ token: token });
 
-      console.log("User logged in:", response.data);
+      "User logged in:", response.data;
     } catch (error) {
       set({
         error: "Login failed. Please check your credentials.",
@@ -43,7 +43,7 @@ const useAuthStore = create((set) => ({
         withCredentials: true,
       });
 
-      console.log("User logged out:", response.data);
+      "User logged out:", response.data;
       set({ user: null });
     } catch (error) {
       console.error("Error during logout:", error);

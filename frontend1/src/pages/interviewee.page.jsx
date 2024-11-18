@@ -36,10 +36,10 @@
 // //     // isActive durumu null değilken kontrol yapın
 // //     if (isActive !== null) {
 // //       if (isActive === false) {
-// //         console.log("Interview is not active, redirecting...");
+// //         ("Interview is not active, redirecting...");
 // //         navigate("/not-authorized");
 // //       } else if (isActive === true) {
-// //         console.log("Interview is active, continuing...");
+// //         ("Interview is active, continuing...");
 // //       }
 // //     }
 // //   }, [isActive, navigate]);
@@ -80,7 +80,7 @@
 // //     if (isRecording && currentQuestionIndex < questionIds.length - 1) {
 // //       const currentTime = question.time * 60 - remainingTime; // Şu anki soruda geçen süre
 // //       totalElapsedTime += currentTime; // Toplam geçen süreye ekle
-// //       console.log(totalElapsedTime);
+// //       (totalElapsedTime);
 // //       setTimeRecords((prevRecords) => [
 // //         ...prevRecords,
 // //         {
@@ -127,7 +127,7 @@
 // //     setCountdownStarted(false);
 
 // //     const updatedTimeRecords = [...timeRecords, finalRecord];
-// //     console.log("Güncel zaman kayıtları:", updatedTimeRecords);
+// //     ("Güncel zaman kayıtları:", updatedTimeRecords);
 // //     await setTime(updatedTimeRecords);
 // //   };
 
@@ -150,9 +150,9 @@
 
 // //   const [isModalOpen, setIsModalOpen] = useState(true);
 // //   const handleFormSubmit = async (formData) => {
-// //     console.log("Form verileri:", formData);
+// //     ("Form verileri:", formData);
 // //     const newIntervieweeId = await createUser(formData);
-// //     console.log("Yeni kullanıcı ID'si:", newIntervieweeId);
+// //     ("Yeni kullanıcı ID'si:", newIntervieweeId);
 // //     setIntervieweeId(newIntervieweeId);
 // //     setIsModalOpen(false);
 // //   };

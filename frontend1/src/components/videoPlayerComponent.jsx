@@ -579,7 +579,7 @@ const VideoPlayer = ({
   }, [videoId, getVideoInfo]);
 
   useEffect(() => {
-    console.log(interviewId);
+    interviewId;
     fetchInterviewQuestions(interviewId);
   }, [interviewId, fetchInterviewQuestions]);
 

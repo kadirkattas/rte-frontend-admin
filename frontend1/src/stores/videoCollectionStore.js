@@ -12,7 +12,7 @@ const useVideoStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("Videos fetched:", response.data.interviewVideo.videos);
+      "Videos fetched:", response.data.interviewVideo.videos;
       set({ allVideos: response.data.interviewVideo.videos });
     } catch (error) {
       console.error("Error fetching interviews:", error);
@@ -27,7 +27,7 @@ const useVideoStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("User fetched:", response.data.personalForm);
+      "User fetched:", response.data.personalForm;
       set({ user: response.data.personalForm });
     } catch (error) {
       console.error("Error fetching user:", error);

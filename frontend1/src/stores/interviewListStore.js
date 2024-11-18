@@ -21,7 +21,7 @@ const useInterviewListStore = create((set) => ({
       const response = await axios.get(`/interviews/get-interviews`, {
         withCredentials: true,
       });
-      console.log("Interviews fetched:", response.data.interviews);
+      "Interviews fetched:", response.data.interviews;
       set({ interviews: response.data.interviews }); // Verileri state'e kaydediyoruz
     } catch (error) {
       console.error("Error fetching interviews:", error);
@@ -35,7 +35,7 @@ const useInterviewListStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("Interview questions fetched:", response.data);
+      "Interview questions fetched:", response.data;
       set({ questions: response.data.questions }); // Verileri state'e kaydediyoruz
     } catch (error) {
       console.error("Error fetching interviews:", error);
@@ -49,7 +49,7 @@ const useInterviewListStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("Interview deleted:", response.data);
+      "Interview deleted:", response.data;
       set((state) => ({
         interviews: state.interviews.filter((p) => p._id !== id), // Ensure you're using the correct ID (_id or id based on your data structure)
       }));
@@ -66,7 +66,7 @@ const useInterviewListStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("Interview created:", response.data);
+      "Interview created:", response.data;
       set((state) => ({
         interviews: [response.data.interview, ...state.interviews], // Add to the front of the array
       }));
@@ -83,7 +83,7 @@ const useInterviewListStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("OMG: ", response.data.interview);
+      "OMG: ", response.data.interview;
       set({ interview: response.data.interview }); // Verileri state'e kaydediyoruz
     } catch (error) {
       console.error("Error fetching interview:", error);
@@ -101,7 +101,7 @@ const useInterviewListStore = create((set) => ({
           withCredentials: true, // Yetkilendirme header'ı ekle
         }
       );
-      console.log("Interview updated:", response.data);
+      "Interview updated:", response.data;
 
       set((state) => ({
         interviews: [

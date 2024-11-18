@@ -26,7 +26,7 @@
 
 //   const handleDeletePackage = (id) => {
 //     if (confirm("Are you sure you want to delete this package?")) {
-//       console.log("Deleting package with ID:", id);
+//       ("Deleting package with ID:", id);
 //       removePackage(id);
 //     }
 //   };

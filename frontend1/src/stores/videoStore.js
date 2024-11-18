@@ -16,7 +16,7 @@ const useVideoPageStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("Video fetched:", response.data.signedUrl);
+      "Video fetched:", response.data.signedUrl;
       set({ videoUrl: response.data.signedUrl }); // Save fetched question to state
     } catch (error) {
       console.error("Error fetching question:", error);
@@ -31,7 +31,7 @@ const useVideoPageStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("Video info saved:", response.data);
+      "Video info saved:", response.data;
     } catch (error) {
       console.error("Error saving video info:", error);
     }
@@ -44,7 +44,7 @@ const useVideoPageStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("Video info fetched:", response.data.video);
+      "Video info fetched:", response.data.video;
       set({ videoInfo: response.data.video }); // Save fetched video info to state
     } catch (error) {
       console.error("Error fetching video info:", error);
@@ -58,7 +58,7 @@ const useVideoPageStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("Personal info fetched:", response.data.personalForm);
+      "Personal info fetched:", response.data.personalForm;
       set({ personalInfo: response.data.personalForm }); // Save fetched personal info to state
     } catch (error) {
       console.error("Error fetching personal info:", error);

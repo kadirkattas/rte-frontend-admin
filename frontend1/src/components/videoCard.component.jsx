@@ -16,7 +16,7 @@
 //             headers: { Authorization: `Bearer ${token}` },
 //           }
 //         );
-//         console.log("User fetched:", response.data.personalForm);
+//         ("User fetched:", response.data.personalForm);
 //         setUser(response.data.personalForm);
 //       } catch (error) {
 //         console.error("Error fetching user:", error);
@@ -50,8 +50,6 @@
 // };
 
 // export default VideoCard;
-
-
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";

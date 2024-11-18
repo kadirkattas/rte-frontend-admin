@@ -19,7 +19,7 @@
 
 //   const handlePlay = (id) => {
 //     navigate("/video/" + interviewId + "/" + id);
-//     console.log("Playing a video");
+//     ("Playing a video");
 //   };
 
 //   return (
@@ -70,7 +70,7 @@
 
 //   const handlePlay = (id) => {
 //     navigate("/video/" + interviewId + "/" + id);
-//     console.log("Playing a video", id);
+//     ("Playing a video", id);
 //   };
 
 //   return (
@@ -125,7 +125,7 @@
 
 //   const handlePlay = (id) => {
 //     navigate("/video/" + interviewId + "/" + id);
-//     console.log("Playing a video", id);
+//     ("Playing a video", id);
 //   };
 
 //   return (
@@ -177,7 +177,7 @@
 
 //   const handlePlay = (id) => {
 //     navigate("/video/" + interviewId + "/" + id);
-//     console.log("Playing a video", id);
+//     ("Playing a video", id);
 //   };
 
 //   return (
@@ -237,7 +237,7 @@
 
 //   const handlePlay = (id) => {
 //     navigate("/video/" + interviewId + "/" + id);
-//     console.log("Playing a video", id);
+//     ("Playing a video", id);
 //   };
 
 //   // Calculate total pages
@@ -345,17 +345,17 @@
 
 //   const handlePlay = (id) => {
 //     navigate(`/video/${interviewId}/${id}`);
-//     console.log("Playing a video", id);
+//     ("Playing a video", id);
 //   };
 
 //   // Debugging: Check the content of allVideos
-//   console.log("All Videos:", allVideos);
+//   ("All Videos:", allVideos);
 
 //   // Calculate total pages
 //   const totalPages = Math.ceil(allVideos.length / videosPerPage);
 
 //   // Debugging: Check totalPages
-//   console.log("Total Pages:", totalPages);
+//   ("Total Pages:", totalPages);
 
 //   // Get current page videos
 //   const indexOfLastVideo = currentPage * videosPerPage;
@@ -363,14 +363,14 @@
 //   const currentVideos = allVideos.slice(indexOfFirstVideo, indexOfLastVideo);
 
 //   // Debugging: Check current page and videos shown on the current page
-//   console.log("Current Page:", currentPage);
-//   console.log("Current Videos:", currentVideos);
+//   ("Current Page:", currentPage);
+//   ("Current Videos:", currentVideos);
 
 //   // Handle page change
 //   const handlePageChange = (pageNumber) => {
 //     if (pageNumber > 0 && pageNumber <= totalPages) {
 //       setCurrentPage(pageNumber);
-//       console.log("Navigating to page:", pageNumber);
+//       ("Navigating to page:", pageNumber);
 //     }
 //   };
 
@@ -509,45 +509,45 @@ const VideoCollectionPage = () => {
       </h1>
       {/* Filter Dropdown */}
       <div className="flex items-center ml-[1009px] mb-[-8px]">
-  <select
-    value={filter}
-    onChange={(e) => {
-      setFilter(e.target.value);
-      setCurrentPage(1); // Reset to first page when filter changes
-    }}
-    className="w-[180px] h-[35px] bg-white rounded-[25px] border-2 border-[#9dd0ce] flex items-center text-[14px] font-semibold text-gray-600 focus:border-[#81bebc] focus:ring-0 focus:outline-none"
-  >
-    <option value="All" className="text-[14px] text-gray-700">
-      All
-    </option>
-    <option value="Accept" className="text-[14px] text-gray-700">
-      Accept
-    </option>
-    <option value="Reject" className="text-[14px] text-gray-700">
-      Reject
-    </option>
-    <option value="On Hold" className="text-[14px] text-gray-700">
-      On Hold
-    </option>
-  </select>
-</div>
-<div className="mx-auto p-8 w-full flex-grow mt-[-8px]">
-  <div className="grid grid-cols-4 gap-6 gap-y-[6%] 3xl:mt-4">
-    {Array.isArray(currentVideos) && currentVideos.length > 0 ? (
-      currentVideos.map((video) => (
-        <VideoCard
-          key={video._id}
-          video={video}
-          onPlay={() => handlePlay(video._id)}
-          id={video.intervieweeId}
-          thumbnail={video.signedThumbnailUrl}
-        />
-      ))
-    ) : (
-      <p>No videos available</p>
-    )}
-  </div>
-</div>
+        <select
+          value={filter}
+          onChange={(e) => {
+            setFilter(e.target.value);
+            setCurrentPage(1); // Reset to first page when filter changes
+          }}
+          className="w-[180px] h-[35px] bg-white rounded-[25px] border-2 border-[#9dd0ce] flex items-center text-[14px] font-semibold text-gray-600 focus:border-[#81bebc] focus:ring-0 focus:outline-none"
+        >
+          <option value="All" className="text-[14px] text-gray-700">
+            All
+          </option>
+          <option value="Accept" className="text-[14px] text-gray-700">
+            Accept
+          </option>
+          <option value="Reject" className="text-[14px] text-gray-700">
+            Reject
+          </option>
+          <option value="On Hold" className="text-[14px] text-gray-700">
+            On Hold
+          </option>
+        </select>
+      </div>
+      <div className="mx-auto p-8 w-full flex-grow mt-[-8px]">
+        <div className="grid grid-cols-4 gap-6 gap-y-[6%] 3xl:mt-4">
+          {Array.isArray(currentVideos) && currentVideos.length > 0 ? (
+            currentVideos.map((video) => (
+              <VideoCard
+                key={video._id}
+                video={video}
+                onPlay={() => handlePlay(video._id)}
+                id={video.intervieweeId}
+                thumbnail={video.signedThumbnailUrl}
+              />
+            ))
+          ) : (
+            <p>No videos available</p>
+          )}
+        </div>
+      </div>
 
       {/* Pagination Controls */}
       <div className="flex justify-between mx-8">

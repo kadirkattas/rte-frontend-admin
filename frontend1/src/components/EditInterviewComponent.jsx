@@ -43,7 +43,7 @@
 //       setExtraQuestions(interview.extraQuestions || []);
 
 //       // Log the interview object to see if packages exist
-//       console.log("Interview data:", interview);
+//       ("Interview data:", interview);
 
 //       // Ensure that interview.packages exists before trying to match
 //       const matchedPackages = questionPackages.filter((pkg) =>
@@ -98,7 +98,7 @@
 
 //     try {
 //       await editInterview(interviewId, updatedInterview);
-//       console.log("Updated Interview:", updatedInterview);
+//       ("Updated Interview:", updatedInterview);
 
 //       resetSelectedPackages();
 //       onClose();
@@ -124,7 +124,7 @@
 
 //   const handleDeletePackage = (packageId) => {
 //     const updatedPackages = packages.filter((pkg) => pkg._id !== packageId);
-//     console.log("Updated Packages:", updatedPackages);
+//     ("Updated Packages:", updatedPackages);
 
 //     setPackages(updatedPackages); // Update the state with the new packages array
 //   };
@@ -413,7 +413,7 @@ const EditInterviewComponent = ({ interviewId, onClose }) => {
       setTitle(interview.interviewTitle || "");
       setExtraQuestions(interview.extraQuestions || []);
       // Log the interview object to see if packages exist
-      console.log("Interview data:", interview);
+      "Interview data:", interview;
       // Ensure that interview.packages exists before trying to match
       const matchedPackages = questionPackages.filter((pkg) =>
         interview.packages.some(
@@ -458,7 +458,7 @@ const EditInterviewComponent = ({ interviewId, onClose }) => {
     };
     try {
       await editInterview(interviewId, updatedInterview);
-      console.log("Updated Interview:", updatedInterview);
+      "Updated Interview:", updatedInterview;
       resetSelectedPackages();
       onClose();
     } catch (error) {
@@ -479,7 +479,7 @@ const EditInterviewComponent = ({ interviewId, onClose }) => {
   };
   const handleDeletePackage = (packageId) => {
     const updatedPackages = packages.filter((pkg) => pkg._id !== packageId);
-    console.log("Updated Packages:", updatedPackages);
+    "Updated Packages:", updatedPackages;
     setPackages(updatedPackages); // Update the state with the new packages array
   };
   const moveExtraQuestion = (dragIndex, hoverIndex) => {
@@ -652,12 +652,12 @@ const EditInterviewComponent = ({ interviewId, onClose }) => {
                 <Button
                   label={"Cancel"}
                   onClick={onClose}
-                className="hover:bg-gradient-to-br from-[#47A7A2] via-[#3E9D98] to-[#8CCCC9] hover:text-white"
+                  className="hover:bg-gradient-to-br from-[#47A7A2] via-[#3E9D98] to-[#8CCCC9] hover:text-white"
                 />
                 <Button
                   label={"Save"}
                   onClick={handleEditInterview}
-                   className="hover:bg-gradient-to-br from-[#47A7A2] via-[#3E9D98] to-[#8CCCC9] hover:text-white"
+                  className="hover:bg-gradient-to-br from-[#47A7A2] via-[#3E9D98] to-[#8CCCC9] hover:text-white"
                 />
               </div>
             </form>

@@ -21,7 +21,7 @@ const useIntervieweeStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("Interview questions fetched:", response.data);
+      "Interview questions fetched:", response.data;
       set({ questionIds: response.data.questionIds }); // Save question IDs to state
     } catch (error) {
       console.error("Error fetching interview questions:", error);
@@ -35,7 +35,7 @@ const useIntervieweeStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("Question fetched:", response.data);
+      "Question fetched:", response.data;
       set({ question: response.data.question }); // Save fetched question to state
     } catch (error) {
       console.error("Error fetching question:", error);
@@ -77,7 +77,7 @@ const useIntervieweeStore = create((set) => ({
         }
       );
 
-      console.log("Interview video saved:", response.data);
+      "Interview video saved:", response.data;
     } catch (error) {
       console.error("Error saving interview video:", error);
     } finally {
@@ -93,7 +93,7 @@ const useIntervieweeStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("User created:", response.data.id);
+      "User created:", response.data.id;
       return response.data.id;
     } catch (error) {
       console.error("Error creating user:", error);
@@ -108,7 +108,7 @@ const useIntervieweeStore = create((set) => ({
           withCredentials: true,
         }
       );
-      console.log("Interview status:", response.data.isActive);
+      "Interview status:", response.data.isActive;
       set({ isActive: response.data.isActive });
     } catch (error) {
       console.error("Error getting interview status:", error);

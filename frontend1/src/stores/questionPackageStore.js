@@ -13,7 +13,7 @@ const useQuestionPackageStore = create((set, get) => ({
         withCredentials: true,
       });
       set({ questionPackages: response.data.questionPackages });
-      console.log("Question packages fetched:", response.data.questionPackages);
+      "Question packages fetched:", response.data.questionPackages;
     } catch (error) {
       console.error("Error fetching question packages:", error);
     }
@@ -60,7 +60,7 @@ const useQuestionPackageStore = create((set, get) => ({
         const packageTitles = error.response.data.interviewsUsingPackage.map(
           (interview) => interview.interviewTitle
         );
-        console.log("Error deleting package:", packageTitles);
+        "Error deleting package:", packageTitles;
         alert(
           "This package is currently being used in an interview and cannot be deleted.\nPackages:\n" +
             packageTitles.join("\n")
