@@ -498,7 +498,9 @@ const InterviewCard = ({ interview, onDelete, onEdit }) => {
   };
 
   const copyLink = () => {
-    navigator.clipboard.writeText("localhost:5174/" + interview.interviewUrl);
+    navigator.clipboard.writeText(
+      import.meta.env.VITE_USER_FRONTEND_URL + "/" + interview.interviewUrl
+    );
     alert("Link copied to clipboard!");
   };
 
